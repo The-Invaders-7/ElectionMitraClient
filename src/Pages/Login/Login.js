@@ -2,8 +2,8 @@ import React,{useState} from 'react';
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import login from "../Images/login.svg"
-import "../CSS/Login.css";
+import login from "../../Images/login.svg"
+import "./Login.css";
 
 const Login=()=>{
     const [email,setemail]=useState("");
@@ -43,14 +43,15 @@ const Login=()=>{
         <div className="outer-container">
             <div className="inner-container">
             <form className="login-form" action="#">
-                <input className='newinput' type="text" placeholder="Email" value={email} onChange={e=>setemail(e.target.value)}/>
+                <input className='newinput' type="email" placeholder="Email" value={email} onChange={e=>setemail(e.target.value)}/>
                 <input  className='newinput' type="password" placeholder="Password" value={password} onChange={e=>setpassword(e.target.value)}/>
                 <button type="submit" className="btn-submit" onClick={validate}>Sign in</button>
             </form>
             <div className='login-image'>
-                <img src={login} width="400" height="400"></img>
+                <img src={login} width="300" height="300"></img>
             </div>
             </div>
+            <ToastContainer/>
         </div>
     );
 }

@@ -76,6 +76,7 @@
 }
 
 .login-image{
+    margin-top: 30px;
     text-align: center;
     display: flex;
     justify-content: center;
