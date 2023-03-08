@@ -4,6 +4,7 @@ import './index.css';
 import Login from './Pages/Login/Login';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AdminDashboard from './Pages/AdminDashBoard/adminDashboard';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route exact path='/' element={<App/>}/>
         <Route exact path='/login' element={<Login/>}/>
+        <Route exact path='/adminDashboard' element={<AdminDashboard/>}/>
       </Routes>
     </Router>
     </>
