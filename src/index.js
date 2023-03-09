@@ -24,9 +24,8 @@ root.render(
       <Routes>
         <Route exact path='/' element={<App/>}/>
         <Route exact path='/login' element={<Login/>}/>
-        <Route exact path='/adminDashboard' element={<AdminDashboard/>}/>
+        <Route exact path='/dashboard' element={<AdminDashboard/>}/>
         <Route exact path='/home' element={<Home/>} />
-        <Route exact path='/dashboard' element={<Dashboard/>} />
         <Route exact path='/addvoters' element={<AddVoters/>} />
         <Route exact path='/contact-us' element={<ContactUs/>} />
         <Route exact path='/sign-up' element={<SignUp/>} />
