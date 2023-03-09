@@ -23,6 +23,7 @@ const QueryingPage = () => {
       .get(`http://localhost:8080/user/`)
       .then((response) => {
         setData(Search(response.data));
+        console.log(data)
       })
       .catch(function (error) {
         console.log(error);
@@ -100,7 +101,7 @@ const QueryingPage = () => {
         {data.map((item) => {
           return (
             <div class="container mx-auto">
-              <div className="grid grid-cols-7 gap-4">
+              <div className="grid grid-cols-7 wd:grid-cols-3 gap-4">
                 <div className="">{item.voterId}</div>
                 <div>{item.ward}</div>
                 <div>{item.firstName}</div>
