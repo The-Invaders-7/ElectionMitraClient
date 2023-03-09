@@ -13,6 +13,7 @@ import Dashboard from './components/pages/Dashboard';
 import AddVoters from './components/pages/AddVoters';
 import ContactUs from './components/pages/ContactUs';
 import SignUp from './components/pages/SignUp';
+import QueryingPage from './Pages/QueryingPage/QueryingPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +30,8 @@ root.render(
         <Route exact path='/addvoters' element={<AddVoters/>} />
         <Route exact path='/contact-us' element={<ContactUs/>} />
         <Route exact path='/sign-up' element={<SignUp/>} />
+        <Route exact path='/queryingPage' element={<QueryingPage/>} />
+
       </Routes>
     </Router>
     </>
