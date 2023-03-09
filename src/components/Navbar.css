@@ -25,6 +25,10 @@
    size: 20px;
 }
 
+.img1{
+  width: 150px;
+}
+
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);

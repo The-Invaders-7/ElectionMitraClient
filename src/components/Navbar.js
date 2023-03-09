@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logo from "../Images/logo.svg"
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,7 +31,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          Election Mitra
+          <img src={logo} className="img1"/>
         </Link>
         <i class='fab fa-firstdraft' />
 
@@ -67,6 +68,16 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <Link
+              to='/queryingPage'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Search Voter
+            </Link>
+          </li>
+          
+          <li className='nav-item'>
+            <Link
               to='/contact-us'
               className='nav-links'
               onClick={closeMobileMenu}
@@ -74,15 +85,7 @@ function Navbar() {
               Contact Us
             </Link>
           </li>
-          <li>
-            <Link
-              to='/sign-up'
-              className='nav-links-mobile'
-              onClick={closeMobileMenu}
-            >
-              Sign Up
-            </Link>
-          </li>
+          
         </ul>
         <Button />
       </nav>
