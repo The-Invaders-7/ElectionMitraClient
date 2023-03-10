@@ -22,7 +22,7 @@ const QueryingPage = () => {
 
   useEffect(() => {
     getData();
-  });
+  },[firstName,middleName,lastName,age,voterId,ward]);
 
   const getData = async (e) => {
     console.log("FirstName "+firstName+" Middle Name "+middleName+" Last Name "+lastName+" age "+age+" Ward "+ward+" VoterId "+voterId);
