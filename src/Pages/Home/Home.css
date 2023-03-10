@@ -1,0 +1,58 @@
+.im1{
+    width: 600px;
+    float: left;
+    /* margin: 30px; */
+    margin-left: 70px;
+}
+
+.im2{
+    width: 400px;
+    float: right;
+    margin-left: 110px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.icons{
+    display: flex
+}
+
+body{
+    background-color: #87CDFF;
+    height: 90vh;
+}
+
+.p-5{
+    background-color: #87CDFF;
+    flex-direction: column;
+    display: flex;
+}
+
+.border{
+    background-color: #AEDAFC;
+    border-radius: 20px;
+}
+
+.adminHeader{
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.grid{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container2{
+    height: 70px;
+    margin: 0px;
+    width: 350px;
+    height: 90px;
+    margin-left: 100px;
+    background-color: #AEDAFC;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+}

@@ -7,7 +7,6 @@ import github from '../../Images/icons8-github.svg'
 import linkedin from '../../Images/icons8-linkedin-circled.svg'
 
 const ContactUs = () => {
-    // function to get the data from database for displaying 
     const technologies = [
         {
           type: "CMS",
@@ -82,7 +81,6 @@ const ContactUs = () => {
                         </div>
                         <div className='icons'>
                         <div className="mt-4 flex">
-                            
                             <a href={item.github}><img src={github} className="im1"/></a>
                         </div>
                         <div className="mt-4 flex">

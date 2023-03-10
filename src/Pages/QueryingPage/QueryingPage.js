@@ -9,7 +9,7 @@ import "react-dropdown/style.css";
 
 const QueryingPage = () => {
   const [query, setQuery] = useState("");
-  const [key, setkey] = useState("firstName");
+  const [key, setkey] = useState("voterId");
   const keys = [key];
   const [data, setData] = useState([]);
   const [pageNo, setPageNo] = useState(1);
