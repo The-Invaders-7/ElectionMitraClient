@@ -11,9 +11,10 @@ import './App.css';
 import Home from './components/pages/Home';
 import Dashboard from './components/pages/Dashboard';
 import AddVoters from './components/pages/AddVoters';
-import ContactUs from './components/pages/ContactUs';
 import SignUp from './components/pages/SignUp';
 import QueryingPage from './Pages/QueryingPage/QueryingPage';
+import AddVoter from './Pages/AddVoter/AddVoter';
+import ContactUs from './Pages/ContactUs/contactUs';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,11 +27,10 @@ root.render(
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/dashboard' element={<AdminDashboard/>}/>
         <Route exact path='/home' element={<Home/>} />
-        <Route exact path='/addvoters' element={<AddVoters/>} />
+        <Route exact path='/addvoters' element={<AddVoter/>} />
         <Route exact path='/contact-us' element={<ContactUs/>} />
         <Route exact path='/sign-up' element={<SignUp/>} />
         <Route exact path='/queryingPage' element={<QueryingPage/>} />
-
       </Routes>
     </Router>
     </>

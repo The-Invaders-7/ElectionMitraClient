@@ -1,0 +1,45 @@
+body{
+    background-color: #87CDFF;
+
+}
+
+.p-5{
+    background-color: #87CDFF;
+}
+
+.border{
+    background-color: #AEDAFC;
+    border-radius: 20px;
+}
+
+.adminHeader{
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.grid{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.im1{
+    width: 40px;
+    float: left;
+    
+}
+
+.im2{
+    width: 40px;
+    float: right;
+    margin-left: 30px;
+}
+
+.icons{
+    /* flex-direction: row; */
+    /* width: 50%; */
+    margin: 0;
+    display: flex
+}
+
