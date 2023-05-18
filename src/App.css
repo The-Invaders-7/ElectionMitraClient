@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}

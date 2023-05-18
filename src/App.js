@@ -1,23 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
+import Base64ImageConverter from './Base64ImageConverter';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className="app-title">Base64 to Image Converter App</h1>
+      <Base64ImageConverter />
     </div>
   );
 }
