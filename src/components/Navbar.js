@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
+import { Logout } from './Logout';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from "../Images/logo.svg"
@@ -10,6 +11,8 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const userEmail = localStorage.getItem("userEmail");
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -27,6 +30,7 @@ function Navbar() {
     }
   };
 
+  console.log("UserEmail "+userEmail);
   return (
     <>
       <nav className='navbar'>
@@ -57,15 +61,14 @@ function Navbar() {
               Dashboard 
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link
-              to='/addvoters'
+          {userEmail!=null && <li className='nav-item'>
+            <a
+              href="https://leetcode.com"
               className='nav-links'
-              onClick={closeMobileMenu}
             >
               AddVoters
-            </Link>
-          </li>
+            </a>
+          </li>}
           <li className='nav-item'>
             <Link
               to='/queryingPage'
@@ -87,7 +90,8 @@ function Navbar() {
           </li>
           
         </ul>
-        <Button />
+        {userEmail==null && <Button />}
+        {userEmail!=null && <Logout/>}
       </nav>
     </>
   );

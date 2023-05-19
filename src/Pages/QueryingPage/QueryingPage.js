@@ -107,11 +107,11 @@ const QueryingPage = () => {
       if(currentPage>=totalPages){
         setCurrentPage(0);
       }
-      let block=currentPage>0?((currentPage-currentPage%5))/5:0;
-      let startBlockPage=currentPage>0?((currentPage-currentPage%5))/5:0;
-      startBlockPage*=5;
+      let block=currentPage>0?((currentPage-currentPage%20))/20:0;
+      let startBlockPage=currentPage>0?((currentPage-currentPage%20))/20:0;
+      startBlockPage*=20;
       console.log(startBlockPage);
-      const lastBlockPage=(startBlockPage+5)<totalPages?startBlockPage+5:totalPages;
+      const lastBlockPage=(startBlockPage+5)<totalPages?startBlockPage+20:totalPages;
       console.log("Current Pages "+currentPage+" "+" startBlockPage "+startBlockPage+" lastBlockPage "+lastBlockPage);
       for (let i = startBlockPage; i <= lastBlockPage+1; i++) {
         const button = document.createElement('button');
