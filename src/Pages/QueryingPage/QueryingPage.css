@@ -84,3 +84,53 @@ body{
   align-items: center;
   column-gap:10px;
 }
+
+button{
+  color:red;
+  size:20px;
+}
+
+#pagination {
+  display: inline-block;
+}
+
+/* #pagination button:hover:not(.active) {
+  background-color: #ddd;
+} */
+
+#pagination button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+#pagination button:active {
+  background-color: #4CAF50;
+}
+
+
+#pagination button {
+  border-radius: 5px;
+}
+
+#pagination button:active {
+  border-radius: 5px;
+}
+
+#pagination button {
+  transition: background-color .3s;
+}
+
+#pagination button {
+  border: 1px solid #000000; /* Gray */
+}
+
+#pagination button {
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+}
+
+#pagination button {
+  font-size: 18px;
+}

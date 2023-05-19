@@ -4,10 +4,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import login from "../../Images/login.svg"
 import "./Login.css";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Login=()=>{
     const [email,setemail]=useState("");
-    const [password,setpassword]=useState("");  
+    const [password,setpassword]=useState(""); 
+    const navigate = useNavigate(); 
 
     const validate=async(e)=>{
         e.preventDefault();
@@ -21,22 +23,37 @@ const Login=()=>{
                 console.log("Password "+password);
             }
             else{
+                console.log(email+" "+password);
             const res = await axios.post('http://localhost:8080/admin/login', {
                     email: email,
                     password: password
                 });
                 console.log(res);
-                toast.success(` ${email} verified successfully!`, {position: toast.POSITION.BOTTOM_CENTER, autoClose: 1000,})
+                if(res.data.loginSuccess){
+                    toast.success(` ${email} and password verified successfully!`, {position: toast.POSITION.BOTTOM_CENTER, autoClose: 1000,})
+                    localStorage.setItem("userEmail", email);
+                    setemail("");
+                    setpassword("");
+                    setTimeout(() => {
+                        navigate("/");
+                    }, 2500);
+                }else{
+                    toast.error("Wrong Credentials",{position: toast.POSITION.TOP_CENTER, autoClose: 1500});
+                }
+
+                
             }
         }
         catch(error){
             console.log(email+" "+password);
             console.log(e.response.data);
-            if(e.response.data == "No such user exists"){
+            if(e.response.data.message == "Login Failed"){
                 toast.error("Wrong Credentials",{position: toast.POSITION.TOP_CENTER, autoClose: 1500});
-            }else if(e.response.data == "Invalid password"){
-                toast.error("Wrong Credentials",{position: toast.POSITION.TOP_CENTER, autoClose: 1500})
             }
+            // else if(e.response.data == "Invalid password"){
+            //     toast.error("Wrong Credentials",{position: toast.POSITION.TOP_CENTER, autoClose: 1500})
+            // }
+
         }
     }
     return(
