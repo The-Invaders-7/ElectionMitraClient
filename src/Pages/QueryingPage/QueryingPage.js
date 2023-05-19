@@ -5,6 +5,8 @@ import "./QueryingPage.css";
 import Table from "./table";
 import Item from "./item";
 import Print from '../../Images/Download.png';
+import Print1 from '../../Images/Download1.png';
+import Print2 from '../../Images/Download2.png';
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
@@ -204,7 +206,7 @@ const QueryingPage = () => {
           <div>Middle Name</div>
           <div>Last Name</div>
           <div>Gender</div>
-          <div>Print</div>
+          <div>Print Receipt</div>
         </div>
       </div>
 
@@ -214,6 +216,7 @@ const QueryingPage = () => {
           return (
             <div class="container mx-auto">
               <div className="grid grid-cols-7 gap-4">
+                {console.log(item)}
                 <div className="">{item.voterID}</div>
                 <div>{item.ward}</div>
                 <div>{item.firstName}</div>
@@ -221,7 +224,7 @@ const QueryingPage = () => {
                 <div>{item.lastName}</div>
                 <div>{item.gender}</div>
                 <div><button onClick={()=>{handleDownloadClick(item.imageString)}}>
-                      <img src={Print} alt="Print Image"/>
+                      <img src={Print2} alt="Print Image"/>
                     </button>
                 </div>
               </div>

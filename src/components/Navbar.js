@@ -48,7 +48,7 @@ function Navbar() {
               Home
             </Link>
           </li>
-          <li
+          {/* <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
@@ -60,7 +60,7 @@ function Navbar() {
             >
               Dashboard 
             </Link>
-          </li>
+          </li> */}
           {userEmail!=null && <li className='nav-item'>
             <a
               href="https://leetcode.com"
