@@ -201,11 +201,11 @@ const QueryingPage = () => {
       <div class="container mx-auto" id="header">
         <div className="grid grid-cols-7 gap-4" id="whiteText">
           <div className="">voterID</div>
+          <div>City</div>
           <div>Ward</div>
           <div>First Name</div>
           <div>Middle Name</div>
           <div>Last Name</div>
-          <div>Gender</div>
           <div>Print Receipt</div>
         </div>
       </div>
@@ -218,11 +218,11 @@ const QueryingPage = () => {
               <div className="grid grid-cols-7 gap-4">
                 {console.log(item)}
                 <div className="">{item.voterID}</div>
+                <div>{item.city}</div>
                 <div>{item.ward}</div>
                 <div>{item.firstName}</div>
                 <div>{item.middleName}</div>
                 <div>{item.lastName}</div>
-                <div>{item.gender}</div>
                 <div><button onClick={()=>{handleDownloadClick(item.imageString)}}>
                       <img src={Print2} alt="Print Image"/>
                     </button>

@@ -7,8 +7,13 @@ const Logout=()=>{
     localStorage.removeItem('userEmail');
     alert(`Logged Out successfully!`)
     setTimeout(() => {
+        // navigate("/");
+        window.location.reload(false);
+    }, 1000);
+    setTimeout(() => {
         navigate("/");
-    }, 2500);
+        // window.location.reload(false).then(() => {navigate("/");});
+    }, 500);
 
     return(
         <>

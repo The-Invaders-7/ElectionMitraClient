@@ -34,9 +34,15 @@ const Login=()=>{
                     localStorage.setItem("userEmail", email);
                     setemail("");
                     setpassword("");
+                    
+                    setTimeout(() => {
+                        // navigate("/");
+                        window.location.reload(false);
+                    }, 1000);
                     setTimeout(() => {
                         navigate("/");
-                    }, 2500);
+                        // window.location.reload(false).then(() => {navigate("/");});
+                    }, 500);
                 }else{
                     toast.error("Wrong Credentials",{position: toast.POSITION.TOP_CENTER, autoClose: 1500});
                 }

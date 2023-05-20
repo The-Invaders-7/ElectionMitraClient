@@ -81,10 +81,10 @@ const ContactUs = () => {
                         </div>
                         <div className='icons'>
                         <div className="mt-4 flex">
-                            <a href={item.github}><img src={github} className="im1"/></a>
+                            <a href={item.github}><img src={github} className="imm1"/></a>
                         </div>
                         <div className="mt-4 flex">
-                            <a href={item.linkedin}><img src={linkedin} className="im2"/></a>
+                            <a href={item.linkedin}><img src={linkedin} className="imm2"/></a>
                         </div>
                         </div>
                       </div>
