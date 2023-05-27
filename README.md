@@ -11,7 +11,7 @@ AI based backend (Flask) Code: https://github.com/The-Invaders-7/ElectionMitraCo
 
 ## Problem Statement
 
-One of the major challenges in conducting elections is the issuance of voting receipts to the voters. The current process relies on manual methods of searching and retrieving the receipts from a database, which causes several problems. First, it could be more efficient and time-consuming, as it requires human intervention and verification. This results in long queues and dissatisfaction among the voters.
+One of the major challenges in conducting elections is the issuance of voting receipts to the voters. The current process relies on manual methods of searching and retrieving the receipts from a database, which causes several problems. First, it could be more efficient and time-consuming, as it requires human intervention and verification. This results in long queues and dissatisfaction among the voter's.
 
 We have proposed a system that can automatically extract and digitize text from the voter list. This system enables faster and easier searching of voter information and issuing of receipts.
 
